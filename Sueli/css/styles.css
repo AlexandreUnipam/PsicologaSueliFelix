@@ -4740,3 +4740,48 @@ td:last-child {
 .contact-list li {
 	padding-left: 0;
 }
+
+/* Melhorias de responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    /* Ajustes de fontes grandes */
+    h1, .h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    /* Configurações para botões */
+    .btn, button {
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+
+    /* Responsividade de colunas para telas menores */
+    .column, .mob-12 {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Ajuste de margens e espaçamentos */
+    .u-flex-center {
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+/* Melhorias gerais para elementos flexíveis */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container > div {
+    flex: 1 1 100%; /* Elementos ocupam toda a largura em telas pequenas */
+}
+
+@media (min-width: 600px) {
+    .container > div {
+        flex: 1 1 50%; /* Elementos ocupam metade da largura em telas maiores */
+    }
+}
